@@ -10,10 +10,9 @@ This project is a portfolio showcasing various other projects. It is designed to
 
 ## Live Preview
 
-<!-- Add the link to your live site here -->
 [View Live Preview](https://vicker14.github.io/homepage/)
 
 ## Image Preview
 
 <!-- Add a screenshot of your homepage here -->
-![Homepage Screenshot](#)
+![Homepage Screenshot](img/live-preview.png)
