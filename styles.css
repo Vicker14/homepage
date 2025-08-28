@@ -16,6 +16,7 @@
 body {
     margin: 0;
     padding: 0 ;
+    overflow-x: hidden;
 
     color: var(--color-dark);
     background-color: var(--color-light);
@@ -102,6 +103,9 @@ main {
 }
 
 /* Projects */
+.projects {
+    margin-bottom: 3rem;
+}
 .project-grid {
     width: 100%;
 
@@ -117,15 +121,29 @@ main {
 }
 .project-tile {
     width: 100%;
-    background-color: var(--color-accent);
-    border-radius: 1.2rem 1.2rem 0 0;
-
     position: relative;
 
     & svg {
         stroke-width: 3;
         color: var(--color-accent);
     }
+
+    & img {
+        width: 101%;
+        height: 101%;
+        object-fit: cover;
+        border-radius: 1.2rem;
+
+        filter: grayscale();
+
+        &:hover {
+            cursor: pointer;
+            filter: none;
+            transform: scale(110%);
+        }
+    }
+
+
 }
 
 .info {
@@ -138,7 +156,7 @@ main {
 
     box-sizing: border-box;
     padding: 0.5rem 1rem;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
 
     display: flex;
     justify-content: space-between;
@@ -151,6 +169,7 @@ main {
     /* Footer */
 
 
+/*  MEDIA VARIATIONS */
 @media (max-width: 500px) {
     nav ul {
         display: none;
