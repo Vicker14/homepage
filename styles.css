@@ -6,15 +6,128 @@
     --color-accent: hsl(13, 100%, 68%);
     --color-primary: hsl(110, 43%, 86%);
 
-    font-family: 'inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'inter';
     font-weight: 500;
+    font-size: 1rem;
+
+    margin: 0;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    border: 0;
+    padding: 0 ;
 
     color: var(--color-dark);
     background-color: var(--color-light);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MAIN STRUCTURE */
+header, footer {
+    width: 100vw;
+
+    color: var(--color-primary);
+    background-color: var(--color-dark);
+    
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100vw;
+}
+
+/* CONCRETE ELEMENTS */
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+nav, main div, footer div {
+    width: clamp(50%, 500px, 80vw);
+}
+
+    /* Header */
+nav {
+    padding: 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+
+    & svg {
+        display: none;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+    /* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* About */
+.about {
+    height: 20rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.image {
+    max-width: 40%;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: var(--color-dark) 0.5rem 0.7rem;
+
+    background: url(img/skater-green.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about p {
+    margin-top: 1rem;
+}
+/* Projects */
+
+
+    /* Footer */
+
+
+@media (max-width: 500px) {
+    nav ul {
+        display: none;
+    }
+
+    nav svg {
+        display: block;
+        margin-left: auto;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .about {
+        flex-direction: column;
+        height: 30rem;
+
+        & .image {
+            background-position-y: -3.5rem;
+            max-width: 100%;
+        }
+    }
 }
